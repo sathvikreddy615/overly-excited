@@ -16,9 +16,15 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
 
 const addExcitement = theWordArray => {
     let buildUp = "";
+    let bang = "!";
     for (let i = 0; i < theWordArray.length; i++) {
-        buildUp += `${theWordArray[i]} `;
-        console.log(buildUp);
+        if ((i + 1) % 3 === 0) {
+            console.log(buildUp += `${theWordArray[i]} ${bang} `);
+            bang += bang;
+            
+        } else {
+            console.log(buildUp += `${theWordArray[i]} `);
+        }
     }
 }
 
